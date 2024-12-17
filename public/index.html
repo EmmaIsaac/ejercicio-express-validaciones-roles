@@ -3,9 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Acceso denegado</title>
+ 
+  <title>Google SignIn</title>
+  
+  <meta name="google-signin-client_id" content="569463248975-o31oip4od4hmapg7568vvlraiefben2l.apps.googleusercontent.com">
 </head>
 <body>
-  <h1>Acceso denegado</h1>
+  <h1>Google SignIn</h1>
+  <hr>
+
+  <div class="g-signin2" data-onsuccess="onSignIn"></div>
+  
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+  <script>
+   function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+}
+  </script>
 </body>
 </html>
