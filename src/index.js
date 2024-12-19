@@ -5,4 +5,6 @@ const server = new Server();
 
 server.listen();
 
-//11 GOOGLE SignIn
+//11 GOOGLE SignIn - Deprecado
+
+// 12 Categorias y Productos - 7 Tarea...
