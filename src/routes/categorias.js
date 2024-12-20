@@ -28,6 +28,7 @@ router.get(
   [
     check("id", "No es un ID válido").isMongoId(),
     check("id").custom(existeCategoriaPorId),
+    validarCampos, //Es el que arroja el error del express-validator
   ],
   obtenerCategoria
 );
@@ -64,6 +65,7 @@ router.delete(
     esAdminRole,
     check("id", "No es un ID válido").isMongoId(),
     check("id").custom(existeCategoriaPorId),
+    validarCampos,
   ],
   borrarCategoria
 );
