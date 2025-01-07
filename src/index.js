@@ -7,4 +7,4 @@ server.listen();
 
 //11 GOOGLE SignIn - Deprecado
 
-// 13 Carga de archivos... 7 Helper - SubirArchivos
+// 13 Carga de archivos... 12 Borrar archivos del servidor
